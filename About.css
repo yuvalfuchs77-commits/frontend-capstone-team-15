@@ -1,0 +1,151 @@
+:root {
+    --primary-orange: #cd853f;
+    --text-dark: #2d2d2d;
+    --text-light: #666;
+    --bg-light: #fdfdfd;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    margin: 0;
+    line-height: 1.6;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* body {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, sans-serif;
+    background-color: #fffbf5;
+    color: #1f2937;
+} */
+
+.about-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background-color: (--bg-light);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 1.5rem;
+    gap: 8px;
+    color:var(--text-dark);
+}
+
+.logo-img {
+    height: 30px;
+    width: auto;
+}
+
+.highlight-logo {
+    color: var(--primary-orange);
+}
+
+.about-nav .nav-list {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    align-items: center;
+}
+
+.about-nav .nav-list li a {
+    text-decoration: none;
+    color: var(--text-light);
+    font-weight: 500;
+    font-size: 1rem;
+    padding-bottom: 1px solid var(--white);
+    transition: color 0.2s;
+}
+
+.about-nav .nav-list li:nth-child(4) a {
+    color: var(--primary-orange);
+    border-bottom: 1px solid var(--primary-orange);
+    font-weight: 600;
+}
+
+.about-nav .nav-list li a:hover {
+    color: var(--primary-orange)
+}
+
+.about-warpper {
+    background-color:var(--white);
+    max-width: 720px;
+    margin: 60px auto 40px auto;
+    padding: 60px;
+    border-radius: 24px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+}
+
+.about-warpper > img {
+    width: 48px;
+    height: auto;
+    margin-bottom: 24px;
+    display: block;
+}
+
+.first-section {
+    margin-bottom: 40px;
+}
+
+.main-about-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 24px;
+    color: var(--text-dark);
+}
+
+.first-about-p, .second-about-p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color:var(--text-light);
+    margin-bottom: 20px;
+}
+
+.last-about-section {
+    background-color: var(--bg-light);
+    padding: 30px;
+    border-radius: 16px;
+}
+
+.the-team-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.student-name {
+    margin: 0;
+    font-size: 1rem;
+    color: var(--text-dark);
+}
+
+.roles {
+    margin: 6px 0 0 0;
+    font-size: 0.75rem;
+    color: var(--text-light);
+    letter-spacing: 0.05em;
+    font-weight: 500;
+}
+
+.aboutfooter {
+     text-align: center;
+    padding: 20px 20px;
+    color: var(--text-light);
+    font-size: 0.9rem;       
+    border-top: 1px solid #eeeeee;  
+    margin-top: 20px;
+}
