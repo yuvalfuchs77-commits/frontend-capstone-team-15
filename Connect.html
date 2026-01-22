@@ -3,16 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Connect</title>
+    <link rel="stylesheet" href="./Connect.css">
 </head>
 <body>
     <header class="main-header">
         <div class="logo-container">
-            <span class="logo-text">HabitFlow</span>
-            <img src="./sun-logo.png" alt="sun logo">
+            <img src="./images/sun-logo.png" alt="sun logo">
+            <span class="logo-text">
+                <span class="habit-part">Habit</span><span class="flow-part">Flow</span>
+            </span>
         </div>
 
-        <nav class="main-nav">
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="main-nav" id="main-nav">
             <ul class="nav-list">
                 <li><a href="Home">Home</a></li>
                 <li><a href="MyHabits">My Habits</a></li>
@@ -25,13 +34,12 @@
 
     <main class="content-warpper">
         <section class="hero-section">
-            <h1 class="main-title">Lets Connect</h1>
+            <h1 class="main-title">Let's Connect</h1>
             <p class="subtitle">We love hearing from our community</p>
         </section>
 
         <section class="contact-section">
             <form class="contact-form" action="" method="post">
-                <fieldset class="form-container">
 
                     <div class="form-group">
                         <label for="name">Your Name</label>
@@ -61,7 +69,7 @@
                         <button type="submit" class="submit-btn">Send Message</button>
                     </div>
 
-                </fieldset>
+
             </form>
         </section>
     </main>
@@ -70,5 +78,6 @@
         <p>&copy; 2025 HabitFlow. Designed for peace of mind.</p>
     </footer>
     
+    <script src="./Connect.js"></script>
 </body>
 </html>
