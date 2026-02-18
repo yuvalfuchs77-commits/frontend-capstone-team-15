@@ -86,7 +86,7 @@ button { font: inherit; cursor: pointer; }
     display: none;
     width: 44px;
     height: 44px;
-    border: 1px solid var(--border);
+    border: 1px var(--border);
     border-radius: 12px;
     background: var(--white);
     align-items: center;
