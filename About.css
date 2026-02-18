@@ -1,0 +1,289 @@
+:root {
+    --primary-orange: #cd853f;
+    --text-dark: #2d2d2d;
+    --text-light: #666;
+    --bg-light: #fdfdfd;
+    --white: #ffffff;
+
+    --border: #eeeeee;
+    --orange-soft: #fff3e6;
+    --shadow: 0 12px 30px rgba(0,0,0,.06);
+    --radius: 18px;
+    --container: 1100px;
+}
+* {box-sizing: border-box;}
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    margin: 0;
+    line-height: 1.6;
+}
+
+
+a { text-decoration: none; color: inherit; }
+
+
+.about-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(253,253,253,.92);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 60px;
+    
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 1.5rem;
+    gap: 8px;
+    color:var(--text-dark);
+}
+
+.logo-img {
+    height: 40px;
+    width: 40px;
+    object-fit: contain;
+}
+
+.highlight-logo {
+    color: var(--primary-orange);
+}
+
+.nav-toggle {
+   display: none;
+    width: 44px;
+    height: 44px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--white);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 6px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.nav-toggle span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: var(--text-dark);
+    border-radius: 4px;
+}
+
+.about-nav .nav-list {
+    display: flex;
+    list-style: none;
+    gap: 22px;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.about-nav .nav-list li a {
+    text-decoration: none;
+    color: var(--text-light);
+    font-weight: 500;
+    font-size: 1rem;
+    padding-bottom: 1px solid var(--white);
+    transition: color 0.2s;
+}
+
+.about-nav .nav-list li:nth-child(4) a {
+    color: var(--primary-orange);
+    border-bottom: 2px solid var(--primary-orange);
+    font-weight: 600;
+}
+
+.about-nav .nav-list li a:hover {
+    color: var(--primary-orange)
+}
+
+.nav-toggle span {
+    display: block;
+    width: 22px;
+    height: 3px;
+    background: var(--text-dark);
+    border-radius: 4px;
+}
+
+.about-warpper {
+    width: min(720px, calc(100% - 40px)); 
+    margin: 60px auto 40px;
+    padding: 60px;
+    background-color: var(--white);
+    border-radius: 24px;
+     box-shadow: var(--shadow);  
+    border: 1px solid var(--border);
+}
+
+.nav-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.35);
+    z-index: 40;
+    display: none; /* JS will toggle this */
+}
+
+.about-warpper > img {
+    width: 90px;
+    height: 90px;
+    padding: 14px;
+    margin-bottom: 32px;
+    display: block;
+    border-radius: 50%;
+}
+
+.first-section {
+    margin-bottom: 40px;
+}
+
+.main-about-title {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-top: 0;
+    margin-bottom: 24px;
+    color: var(--text-dark);
+}
+
+.first-about-p, .second-about-p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color:var(--text-light);
+    margin-bottom: 20px;
+}
+
+.last-about-section {
+    background-color: var(--bg-light);
+    padding: 30px;
+    border-radius: 16px;
+}
+
+.the-team-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.student-name {
+    margin: 0;
+    font-size: 1rem;
+    color: var(--text-dark);
+}
+
+.roles {
+    margin: 6px 0 0 0;
+    font-size: 0.75rem;
+    color: var(--text-light);
+    letter-spacing: 0.05em;
+    font-weight: 500;
+}
+
+.aboutfooter {
+    padding: 26px 0;
+    border-top: 1px solid var(--border);
+    text-align: center;
+    color: #9a9a9a;
+    font-size: 14px;
+    margin-top: auto;
+}
+
+/* Backdrop for Mobile Menu */
+.nav-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.35);
+    z-index: 40;
+}
+
+body.menu-open .nav-backdrop { display: block; }
+.nav-backdrop[hidden] { display: none; }
+
+@media (max-width: 768px) {
+    
+    .about-warpper {
+        padding: 40px 30px;
+        margin-top: 40px;
+    }
+    
+    .main-about-title { font-size: 1.75rem; }
+}
+
+/* Mobile Navigation Breakpoint  */
+@media (max-width: 480px) {
+    .about-header { padding: 14px 20px; }
+
+    /*Show hamburger */
+    .nav-toggle { display: flex; }
+
+
+    .about-nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: min(78vw, 320px);
+        background: var(--white);
+        border-left: 1px solid var(--border);
+        box-shadow: -18px 0 40px rgba(0,0,0,.08);
+        padding: 84px 24px 24px;
+        
+        /* Close state*/
+        transform: translateX(105%); 
+        transition: transform .25s ease;
+        z-index: 60;
+    }
+
+    /*Open state */
+    body.menu-open .about-nav {
+        transform: translateX(0);
+    }
+    
+    body.menu-open .nav-backdrop {
+        display: block;
+    }
+
+    .about-nav .nav-list {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .about-nav a {
+        display: inline-block;
+        width: fit-content;
+        padding: 10px 24px;
+        border-radius: 50px; 
+        border: none; /* ביטול הקו התחתון של הדסקטופ */
+        font-size: 1.15rem;
+        font-weight: 500;
+        color: var(--text-dark);
+        transition: all 0.2s ease;
+    }
+    .about-nav .nav-list li:nth-child(4) a {
+        border-bottom: none; 
+    }
+
+    .about-nav a:hover,
+    .about-nav a.active {
+        background: var(--orange-soft);
+        color: var(--primary-orange);
+    }
+    
+    /* התאמות נוספות למובייל קטן (עד 480px) */
+    .about-warpper {
+        padding: 30px 20px;
+        width: calc(100% - 32px);
+    }
+}
