@@ -1,0 +1,356 @@
+:root {
+    --primary-orange: #cd853f;       /*הצבע הכתום המרכזי של המותג*/
+    --text-dark: #2d2d2d;           /*צבע טקסט כהה לכותרות*/
+    --text-light: #666;             /*צבע טקסט בהיר יותר לקופסאות*/
+    --bg-light: #fdfdfd;            /*צבע רקע כמעט לבן לכל האתר */
+    --white: #ffffff;               /*לבן מוחלט לכרטיסיות*/
+}
+/*---הגדרות בסיסיות לגוף העמוד---*/
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    margin: 0;              /*ביטול המרווח הדיפולטיבי של הדפדפן*/
+    line-height: 1.6;       /*ריווח בין שורות טקסט */
+}
+
+/*---Header & Navigation(סרגל עליון )---*/
+.main-header {
+    display: flex;              /*מאפשר לסדר את הלוגו והניווט אחד ליד השני*/
+    justify-content: space-between; /*דוחף את הלוגו לשמאל ואת התפריט לימין*/
+    align-items: center;        /*ממרכז אותם אנכית*/
+    padding: 20px 60px;         /*מרווח פנימי : 20 למעלה/למטה , 60 מצדדים */
+    background: transparent;
+    border-bottom: 1px solid #f0f0f0;   /*קו הפרדה עדין בתחתית הסרגל*/
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #444;
+}
+
+.logo-img {
+    width: 30px;        /*גודל קבוע לאייקון הלוגו*/
+    margin-right: 10px; /* רווח בין האייקון לטקסטHabitFlow*/
+}
+
+.highlight-logo {
+    color: var(--primary-orange);   /* בכתום Flowצובע רק את המילה */
+}
+
+/*עיצוב רשימת קישורים*/
+.main-nav .nav-list {
+    display: flex;
+    list-style: none;   /*מבטל את הנקודות של הרשימה */
+    gap: 32px;          /*רווח קבוע בין קישור לקישור */
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav .nav-list li a {
+    text-decoration: none;      /*מבטל את הקו התחתון של הקישורים*/
+    color:var(--text-light);
+    font-weight: 500;
+    font-size: 1rem;
+    padding-bottom: 4px;      /* Hover- רווח קטן מתחת לטקסט בשביל ה */  
+    transition: color 0.2s;   /* הופך את שינוי הצבע לחלק ונעים משך זמן המעבר 0.2ש׳*/
+}
+
+.main-nav .nav-list li:nth-child(1) a {
+    color: var(--primary-orange);
+    border-bottom: 2px solid var(--primary-orange);
+    font-weight: 600;
+}
+
+.main-nav .nav-list li a:hover {
+    color:var(--primary-orange);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-dark);
+    border-radius: 2px;
+}
+
+.home-warpper {
+    padding: 40px 5%; /* מרווח מהצדדים כדי שהכרטיסיות לא יגעו בקצה */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* מרכוז הכותרת והתוכן תמיד */
+    text-align: center;
+}
+
+
+.hero-section {
+    text-align: center;
+    padding: 80px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    background-color: #fff9f0;
+    color: var(--primary-orange);
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 600;
+    border: 1px solid #ffe8cc;
+    margin-bottom: 30px;
+}
+
+.spark-img {
+    width: 16px;
+    margin-right: 8px;
+}
+
+.hero-title {
+    font-size: 56px;
+    line-height: 1.1;
+    margin-bottom: 25px;
+    color: var(--text-dark);
+}
+
+.highlight {
+    color: var(--primary-orange);
+}
+
+.hero-subtitle {
+    font-size: 18px;
+    color: var(--text-light);
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* כפתורים */
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn-primary {
+    text-decoration: none;  /* ביטול קו תחתון של הקישור לדף הabout*/
+    display: inline-block;
+    background-color: var(--primary-orange);
+    color: white;
+    border: none;
+    padding: 16px 35px;
+    border-radius: 50px; /* עיגול מלא כמו בתמונה */
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(205, 133, 63, 0.2);
+    transition: transform 0.2s;
+}
+
+.btn-secondary {
+    text-decoration: none;  /* ביטול קו תחתון של הקישור לדף הabout*/
+    display: inline-block; /* סידור גובה ורוחב */
+    background-color: white;
+    color: var(--text-dark);
+    border: 1px solid #eee;
+    padding: 16px 35px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+}
+
+.btn-primary:hover, .btn-secondary:hover {
+    transform: translateY(-2px);
+}
+
+/* Features Section - כרטיסיות */
+.features-section {
+    padding: 60px 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.feature-card {
+    background: var(--white);
+    padding: 40px 30px;
+    border-radius: 30px;
+    width: 280px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.04); /* צל רך מאוד */
+}
+
+.icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 50%;
+}
+
+.feature-card h3 {
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.feature-card p {
+    color: var(--text-light);
+    font-size: 15px;
+}
+
+/* Footer */
+.main-footer {
+    text-align: center;
+    padding: 40px;
+    color: #999;
+    font-size: 14px;
+    margin-top: 50px;
+    border-top: 1px solid #f0f0f0;
+}
+
+/* Backdrop (הרקע הכהה) - נדרש עבור התפריט */
+.nav-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.35);
+    z-index: 900;
+    display: none;
+}
+body.menu-open .nav-backdrop { display: block; }
+
+
+/* III. Desktop Adjustment (עד 1024 פיקסלים)
+   התאמות למסכים בינוניים (לפטופים קטנים / אייפד לרוחב) */
+@media (max-width: 1024px) {
+    .home-warpper {
+        padding: 40px 30px; /* הקטנת שוליים בצדדים */
+    }
+    
+    .hero-title {
+        font-size: 48px; /* הקטנת כותרת ראשית */
+    }
+
+    /* הכרטיסיות למטה יסתדרו קצת יותר צפוף */
+    .container {
+        gap: 20px;
+    }
+}
+
+
+/* II. Tablet (עד 768 פיקסלים)
+   כאן התפריט הופך להמבורגר והעיצוב משתנה משמעותית */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex; /* הצגת הכפתור */
+    }
+
+    .main-nav {
+        position: fixed; top: 0; right: 0; width: 280px; height: 100vh;
+        background-color: var(--white);
+        transform: translateX(105%); transition: transform 0.3s ease;
+        z-index: 1000; padding-top: 80px; padding-right: 20px; padding-left: 20px;
+        box-shadow: -5px 0 20px rgba(0,0,0,0.1);
+    }
+
+    /* מצב פתוח */
+    body.menu-open .main-nav {
+        transform: translateX(0);
+    }
+
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+    
+
+    .hero-title {
+        font-size: 40px;
+    }
+    
+    /* תיקון ספציפי: ביטול הקו התחתון של Home שמגיע מהדסקטופ */
+    .main-nav .nav-list li:nth-child(1) a {
+        border-bottom: none;
+    }
+
+    .main-nav .nav-list li:nth-child(1) a, /* הלינק של Home */
+    .main-nav a:hover {                    /* ריחוף על כל לינק אחר */
+        background-color: #fff3e6;         /* (var(--orange-soft)) רקע כתום בהיר */
+        color: var(--primary-orange);      /* טקסט כתום כהה */
+        font-weight: 700;
+        border-radius: 50px;
+        padding: 12px 24px;
+    }
+
+    .hero-subtitle {
+        font-size: 16px;
+        padding: 0 20px;
+    }
+}
+
+
+/* I. Mobile (עד 480 פיקסלים)
+   התאמות למכשירים ניידים צרים */
+@media (max-width: 480px) {
+    .main-header {
+        padding: 15px 20px; /* הקטנת ה-Header */
+    }
+
+    .logo {
+        font-size: 1.3rem; /* לוגו קטן יותר */
+    }
+
+    .hero-section {
+        padding: 40px 10px; /* פחות מרווח פנימי */
+    }
+
+    .hero-title {
+        font-size: 32px; /* כותרת מותאמת למובייל */
+        line-height: 1.2;
+    }
+
+    .hero-subtitle {
+        font-size: 15px;
+        margin-bottom: 30px;
+    }
+
+    /* כפתורים אחד מתחת לשני במובייל */
+    .hero-buttons {
+        flex-direction: column; 
+        gap: 15px;
+        width: 100%;
+    }
+
+    .btn-primary, .btn-secondary {
+        width: 100%; /* כפתור לכל רוחב המסך */
+        text-align: center;
+        padding: 14px 20px;
+    }
+
+    .feature-card {
+        width: 100%; /* כרטיס תופס את כל הרוחב */
+        margin-bottom: 10px;
+    }
+}
+
