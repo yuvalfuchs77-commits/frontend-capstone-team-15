@@ -217,7 +217,7 @@ body {
     width: 25px;              
     height: 3px;              
     margin: 5px 0;           
-    background-color: var(--primary-orange);
+    background-color: var(--text-dark);
     transition: 0.4s;         
 }
 

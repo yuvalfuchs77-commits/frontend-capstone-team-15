@@ -192,7 +192,7 @@ input, select, textarea{
     width: 25px;              
     height: 3px;              
     margin: 5px 0;           
-    background-color: var(--primary-orange);
+    background-color: var(--text-dark);
     transition: 0.4s;         
 }
 
@@ -227,11 +227,8 @@ input, select, textarea{
 
     
     .main-header {
-        flex-direction: row; 
-        justify-content: space-between;
-        align-items: center;
         padding: 15px;
-        gap: 15px;
+        
     }
 
     .hamburger{
