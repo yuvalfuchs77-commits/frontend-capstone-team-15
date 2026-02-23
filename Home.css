@@ -340,6 +340,8 @@ body.menu-open .nav-backdrop { display: block; }
         flex-direction: column; 
         gap: 15px;
         width: 100%;
+        align-items: center; 
+        justify-content: center;
     }
 
     .btn-primary, .btn-secondary {
